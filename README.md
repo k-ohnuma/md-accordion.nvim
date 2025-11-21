@@ -1,10 +1,14 @@
-md-accordion.nvim
+# md-accordion.nvim
 
 A small Neovim plugin that turns selected Markdown text into a collapsible
 `<details>` block — and unwraps it back when the selection already contains a
 `<details>` block.
 
 Perfect for quickly creating collapsible sections in Markdown documents.
+
+## Demo
+
+https://github.com/user-attachments/assets/d5990d0e-88c7-48dc-b960-b0a475431b11
 
 ## Features
 
