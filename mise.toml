@@ -1,0 +1,15 @@
+[tools]
+stylua = "latest"
+
+[tasks.format]
+run = "stylua ."
+
+[tasks."format:check"]
+run = "stylua --check ."
+
+[tasks.gitpush]
+depends = ["format:check"]
+run = '''
+branch=$(git rev-parse --abbrev-ref HEAD)
+git push origin $branch
+'''

@@ -1,0 +1,19 @@
+name: format check
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jdx/mise-action@v3
+        with:
+          version: 2025.11.4
+          install: true
+          cache: true
+          experimental: false
+      - name: format:check
+        run: mise run format:check
